@@ -1,0 +1,26 @@
+table DimRegion
+	lineageTag: d311c27d-2bf9-4eaf-bc23-182c45e2fabe
+
+	column RegionKey
+		dataType: int64
+		isHidden
+		lineageTag: b03ee837-08a6-4f37-98c7-8dd1f34a5712
+		summarizeBy: none
+		sourceColumn: RegionKey
+
+	column RegionName
+		dataType: string
+		lineageTag: 29a874e5-2902-48f4-b588-177e36c2d5db
+		sourceColumn: RegionName
+
+	partition DimRegion = m
+		mode: import
+		source =
+				let
+					Raw = Csv.Document(Binary.Decompress(Binary.FromText(
+					"RYw7DsIwEER7S3uHHGAb/rSQAiEERQr6UbxCK5m1YseFb4+Thu7N6M0M8tFoD6k8rPTCV8ht+Amf1JPbco8ZIZqC3I4v5hFKXsKe3whi48IHvjZG0rG75wDzmdyxdXkq0vWx2JwquRPfEHQdnNutIdW//gM=", BinaryEncoding.Base64), Compression.Deflate), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"RegionKey",Int64.Type},{"RegionName",type text}}, "en-US")
+				in
+					Typed
+

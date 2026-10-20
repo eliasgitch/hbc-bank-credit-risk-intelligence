@@ -1,0 +1,13 @@
+# Local Power BI Desktop caches/settings
+**/.pbi/
+**/LocalSettings.json
+**/.DS_Store
+Thumbs.db
+
+# Developer tooling and temporary files
+**/node_modules/
+**/__pycache__/
+**/.pytest_cache/
+*.log
+*.tmp
+*.bak

@@ -1,0 +1,80 @@
+relationship e5307349d2355dbb8cc6
+	fromColumn: FactLoanSnapshot.LoanKey
+	toColumn: DimLoan.LoanKey
+
+relationship 5a780c8181545b389726
+	fromColumn: FactLoanSnapshot.CustomerKey
+	toColumn: DimCustomer.CustomerKey
+
+relationship 38a7e80a1e58567c923c
+	fromColumn: FactLoanSnapshot.DateKey
+	toColumn: DimDate.DateKey
+
+relationship 8cc24110833d5a999145
+	fromColumn: FactLoanSnapshot.ProductKey
+	toColumn: DimProduct.ProductKey
+
+relationship 824d78bed0aa5e27a559
+	fromColumn: FactLoanSnapshot.RegionKey
+	toColumn: DimRegion.RegionKey
+
+relationship 0ee23a830d1356fc8db9
+	fromColumn: FactLoanSnapshot.GradeKey
+	toColumn: DimGrade.GradeKey
+
+relationship 1347b092ae175b12a59b
+	fromColumn: FactPayment.LoanKey
+	toColumn: DimLoan.LoanKey
+
+relationship 8a718cf62bc157cb8f2a
+	fromColumn: FactPayment.CustomerKey
+	toColumn: DimCustomer.CustomerKey
+
+relationship fdb8ccbb7cd2520990ab
+	fromColumn: FactPayment.DateKey
+	toColumn: DimDate.DateKey
+
+relationship 80486099aa9154c985be
+	fromColumn: FactPayment.ProductKey
+	toColumn: DimProduct.ProductKey
+
+relationship e791271309d35a71adfa
+	fromColumn: FactTransition.LoanKey
+	toColumn: DimLoan.LoanKey
+
+relationship b155338853555ec88a53
+	fromColumn: FactTransition.DateKey
+	toColumn: DimDate.DateKey
+
+relationship 6eb0d2dffed65220a2a5
+	fromColumn: FactTransition.ProductKey
+	toColumn: DimProduct.ProductKey
+
+relationship 2922a4227b4c5f69b04f
+	fromColumn: FactTransition.RegionKey
+	toColumn: DimRegion.RegionKey
+
+relationship b1139bde81155b4cac49
+	fromColumn: FactRecovery.LoanKey
+	toColumn: DimLoan.LoanKey
+
+relationship 58a8d238de6b558e887c
+	fromColumn: FactRecovery.DateKey
+	toColumn: DimDate.DateKey
+
+relationship 149bd8d40ba25337b66c
+	fromColumn: FactRecovery.ProductKey
+	toColumn: DimProduct.ProductKey
+
+relationship 9a7bca5e0cf44c47801d
+	fromColumn: FactCountryMonth.CountryCode
+	toColumn: DimCountry.CountryCode
+
+relationship e7ab8e7c527346c1ac7a
+	fromColumn: FactCountryMonth.YearMonth
+	toColumn: DimDate.YearMonth
+
+relationship f21489e733b54cbba3de
+	fromColumn: FactCountryMonth.ProductName
+	toColumn: DimProduct.ProductName
+

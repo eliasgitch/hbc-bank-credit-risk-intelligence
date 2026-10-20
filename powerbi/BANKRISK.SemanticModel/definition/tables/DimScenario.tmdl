@@ -1,0 +1,44 @@
+table DimScenario
+	lineageTag: 9e79c94a-dbae-4d08-ab57-1928971119b6
+
+	column ScenarioKey
+		dataType: int64
+		isHidden
+		lineageTag: 2a83e878-3a71-422b-81e6-8d35c803739e
+		summarizeBy: none
+		sourceColumn: ScenarioKey
+
+	column ScenarioName
+		dataType: string
+		lineageTag: 85666e48-b7a2-4f0c-842f-00a04cbdb1d1
+		sourceColumn: ScenarioName
+
+	column PDMultiplier
+		dataType: double
+		lineageTag: 176b4f03-91c1-484d-9278-3195ca0f6255
+		summarizeBy: none
+		sourceColumn: PDMultiplier
+
+	column LGDMultiplier
+		dataType: double
+		lineageTag: 113d2c21-6f52-4c90-bc18-de0bf95eb3e1
+		summarizeBy: none
+		sourceColumn: LGDMultiplier
+
+	column EADMultiplier
+		dataType: double
+		lineageTag: 87b0c350-dcc4-4aba-90f9-bf7d24682d49
+		summarizeBy: none
+		sourceColumn: EADMultiplier
+
+	partition DimScenario = m
+		mode: import
+		source =
+				let
+					Raw = Csv.Document(Binary.Decompress(Binary.FromText(
+					"C05OzUssysz3Tq3UCYay/RJzU3UCXHxLc0oyC3IyU4t0fNyRea6OSDxeLkMdp8Ti1JzMvFQdQxDk5TLScUwpSy0qBgroGQOxoSmQMDDl5TLWCU4FSoDELUByIHFDI14uAA==", BinaryEncoding.Base64), Compression.Deflate), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"ScenarioKey",Int64.Type},{"ScenarioName",type text},{"PDMultiplier",type number},{"LGDMultiplier",type number},{"EADMultiplier",type number}}, "en-US")
+				in
+					Typed
+

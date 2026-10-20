@@ -1,0 +1,32 @@
+table DimCountry
+	lineageTag: 301fc8de-1208-4d6c-85d1-ef10a3268af0
+
+	column CountryCode
+		dataType: string
+		lineageTag: 3cf7800a-a744-4cc6-a87e-de3eb95a0eac
+		summarizeBy: none
+		sourceColumn: CountryCode
+
+	column CountryName
+		dataType: string
+		lineageTag: 427ae449-79ad-41a0-a80f-0d1aab7032ec
+		summarizeBy: none
+		sourceColumn: CountryName
+
+	column RegionGroup
+		dataType: string
+		lineageTag: af96cecc-8ad1-4023-99d7-7ad95fe91950
+		summarizeBy: none
+		sourceColumn: RegionGroup
+
+	partition DimCountry = m
+		mode: import
+		source =
+				let
+					Raw = Csv.Document(Binary.Decompress(Binary.FromText(
+					"VVFbjsIwDPxH4g4cwJcIaWjLI1QN1a74M9QL0bZJlaZi4fQbIF3Ynyge22PPmNvBeHfltibgz7/ElqCkk7YmdXbophNWCqiM9lTPmMPDTLTaoacexEawkK4UsKH3DhuNwArGp5N5yWDu8KYbYC05fcR+OuFMAkeDNb6DmQB10f5GrkFTR06erYGfdUP/KuUdM+MMvg01trHtQb8TJqKClFyL5hrJhCpAdahNjBdhuYVDc6QIpPNyFLjS5lTbNiayVQqZNafZKjxxbJ5IyE1tDfV/cnOZ3LFXvGOQe2zGDZaFhCV2aGJ+tS1B2cGfA7GjsWsjPmFDP/po3+TIdQKS/Plpz+i53K8DepntCR+uPQmK4Ehh32xUrAKFQ60fhwvrRTgNhgSh2IXpsVd93O9ANY0u7aoSdoP7plFEpdjokvKP+7+23LNFFMS+7lBs+QU=", BinaryEncoding.Base64), Compression.Deflate), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"CountryCode",type text},{"CountryName",type text},{"RegionGroup",type text}}, "en-US")
+				in
+					Typed
+

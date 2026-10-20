@@ -1,0 +1,29 @@
+{
+  "version": "1.0.3.0",
+  "author": {
+    "name": "HBC Bank Portfolio",
+    "email": "eliasgitch@users.noreply.github.com"
+  },
+  "resources": [
+    {
+      "resourceId": "rId0",
+      "sourceType": 5,
+      "file": "resources/hbcGlobalRiskIntelligenceEC2026.pbiviz.json"
+    }
+  ],
+  "visual": {
+    "guid": "hbcGlobalRiskIntelligenceEC2026",
+    "name": "hbcGlobalRiskIntelligence",
+    "displayName": "HBC Bank | Credit Risk Intelligence",
+    "version": "1.0.3.0",
+    "description": "HBC Bank global synthetic credit portfolio with interactive executive dashboard, portfolio analysis, credit quality, stress and loan explorer.",
+    "supportUrl": "https://github.com/eliasgitch/bankrisk-credit-risk-intelligence/issues",
+    "gitHubUrl": "https://github.com/eliasgitch/bankrisk-credit-risk-intelligence",
+    "visualClassName": "Visual"
+  },
+  "metadata": {
+    "pbivizjson": {
+      "resourceId": "rId0"
+    }
+  }
+}

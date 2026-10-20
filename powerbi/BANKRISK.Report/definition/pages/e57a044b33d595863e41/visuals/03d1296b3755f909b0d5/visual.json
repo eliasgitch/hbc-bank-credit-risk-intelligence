@@ -1,0 +1,290 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "03d1296b3755f909b0d5",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 900.92658588738425,
+    "width": 1600,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "hbcGlobalRiskIntelligenceEC2026",
+    "query": {
+      "queryState": {
+        "month": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "YearMonth"
+                }
+              },
+              "queryRef": "FactCountryMonth.YearMonth",
+              "nativeQueryRef": "YearMonth"
+            }
+          ]
+        },
+        "country": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "CountryCode"
+                }
+              },
+              "queryRef": "FactCountryMonth.CountryCode",
+              "nativeQueryRef": "CountryCode"
+            }
+          ]
+        },
+        "country_name": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "CountryName"
+                }
+              },
+              "queryRef": "FactCountryMonth.CountryName",
+              "nativeQueryRef": "CountryName"
+            }
+          ]
+        },
+        "region_group": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCountry"
+                    }
+                  },
+                  "Property": "RegionGroup"
+                }
+              },
+              "queryRef": "DimCountry.RegionGroup",
+              "nativeQueryRef": "RegionGroup"
+            }
+          ]
+        },
+        "product": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "ProductName"
+                }
+              },
+              "queryRef": "FactCountryMonth.ProductName",
+              "nativeQueryRef": "ProductName"
+            }
+          ]
+        },
+        "exposure": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "Global Exposure EUR"
+                }
+              },
+              "queryRef": "FactCountryMonth.Global Exposure EUR",
+              "nativeQueryRef": "Global Exposure EUR"
+            }
+          ]
+        },
+        "npl": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "Global NPL EUR"
+                }
+              },
+              "queryRef": "FactCountryMonth.Global NPL EUR",
+              "nativeQueryRef": "Global NPL EUR"
+            }
+          ]
+        },
+        "ecl": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "Global ECL EUR"
+                }
+              },
+              "queryRef": "FactCountryMonth.Global ECL EUR",
+              "nativeQueryRef": "Global ECL EUR"
+            }
+          ]
+        },
+        "stage2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "Global Stage 2 EUR"
+                }
+              },
+              "queryRef": "FactCountryMonth.Global Stage 2 EUR",
+              "nativeQueryRef": "Global Stage 2 EUR"
+            }
+          ]
+        },
+        "stage3": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "Global Stage 3 EUR"
+                }
+              },
+              "queryRef": "FactCountryMonth.Global Stage 3 EUR",
+              "nativeQueryRef": "Global Stage 3 EUR"
+            }
+          ]
+        },
+        "dpd30": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "Global DPD 30 EUR"
+                }
+              },
+              "queryRef": "FactCountryMonth.Global DPD 30 EUR",
+              "nativeQueryRef": "Global DPD 30 EUR"
+            }
+          ]
+        },
+        "scheduled": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "Global Scheduled EUR"
+                }
+              },
+              "queryRef": "FactCountryMonth.Global Scheduled EUR",
+              "nativeQueryRef": "Global Scheduled EUR"
+            }
+          ]
+        },
+        "received": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "Global Received EUR"
+                }
+              },
+              "queryRef": "FactCountryMonth.Global Received EUR",
+              "nativeQueryRef": "Global Received EUR"
+            }
+          ]
+        },
+        "loans": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactCountryMonth"
+                    }
+                  },
+                  "Property": "Global Loans"
+                }
+              },
+              "queryRef": "FactCountryMonth.Global Loans",
+              "nativeQueryRef": "Global Loans"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "FactCountryMonth"
+                  }
+                },
+                "Property": "Global Exposure EUR"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "BANKRISKBase2026",
+  "dataColors": [
+    "#64E0CC",
+    "#78A9EE",
+    "#F6B778",
+    "#B6A7F3",
+    "#E48392",
+    "#18B8A8"
+  ],
+  "background": "#0A121F",
+  "foreground": "#EDF5FC",
+  "tableAccent": "#64E0CC",
+  "good": "#64E0CC",
+  "neutral": "#F6B778",
+  "bad": "#E48392",
+  "textClasses": {
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 25,
+      "color": "#EDF5FC"
+    },
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 13,
+      "color": "#EDF5FC"
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#EDF5FC"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 9,
+      "color": "#849AAF"
+    }
+  },
+  "foregroundNeutralSecondary": "#849AAF",
+  "foregroundNeutralTertiary": "#536B80",
+  "backgroundLight": "#111F30",
+  "backgroundNeutral": "#16283A"
+}

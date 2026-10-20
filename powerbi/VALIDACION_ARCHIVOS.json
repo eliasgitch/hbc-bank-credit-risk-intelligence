@@ -1,0 +1,93 @@
+{
+  "report_origin": "BANKRISK_Portfolio_v0.2_PBIR.zip, byte-identical native report",
+  "report_pages": [
+    "44415d70a5845f859bd4",
+    "894d6eef5e44531ba937",
+    "950118fdea76590ca282",
+    "525884994bd2599ea009",
+    "3dc5e7d5e8ba58a69489"
+  ],
+  "builtin_visual_count": 22,
+  "private_custom_visuals_registered": false,
+  "model_table_count": 13,
+  "decoded_embedded_tables": {
+    "DimCustomer": {
+      "rows": 2400,
+      "columns": 5,
+      "raw_bytes": 73264,
+      "sha256": "05429f1805957205a5f44c37509a39d57cb3eb1e8bca84a8d2ce7f01ab22d18d"
+    },
+    "FactCountryMonth": {
+      "rows": 2688,
+      "columns": 14,
+      "raw_bytes": 302307,
+      "sha256": "9107392a3ed21fa130f432b7d40ab87cf6b661b2e9e8610f4cfdee3d76a6b5c9"
+    },
+    "DimGrade": {
+      "rows": 5,
+      "columns": 3,
+      "raw_bytes": 77,
+      "sha256": "1ac29c9790a58e91c646272b7b381defb42e1d919c91fafb03b457917843768d"
+    },
+    "DimDate": {
+      "rows": 24,
+      "columns": 7,
+      "raw_bytes": 1095,
+      "sha256": "a0bdc156a6b0c7580cc57269cd55689db3497badaa0e69dce22bdfd4c057f739"
+    },
+    "FactRecovery": {
+      "rows": 1501,
+      "columns": 4,
+      "raw_bytes": 34144,
+      "sha256": "4ba00860fd41051c3acff984b3746aa696950a9efa7d8ec2ba5dac403b69c0c8"
+    },
+    "DimLoan": {
+      "rows": 2400,
+      "columns": 10,
+      "raw_bytes": 128941,
+      "sha256": "174bb3720cc8643363f384c5331e0d4bc90575c49155c79d1fc301f22621494e"
+    },
+    "FactLoanSnapshot": {
+      "rows": 34807,
+      "columns": 14,
+      "raw_bytes": 2510791,
+      "sha256": "c731971b4f89bf48aaf88d46f18537a667838271d99b48235cef85424efdceac"
+    },
+    "DimRegion": {
+      "rows": 8,
+      "columns": 2,
+      "raw_bytes": 137,
+      "sha256": "c332b0fc7037a21ba65b3700ce876aca72e4c7936d17f76871803008216b68e7"
+    },
+    "FactTransition": {
+      "rows": 32407,
+      "columns": 7,
+      "raw_bytes": 1030061,
+      "sha256": "f3ff4b5249704062e1ac5056d3d5862096ac56b77530c0b6bf503caf6ff1a400"
+    },
+    "DimProduct": {
+      "rows": 4,
+      "columns": 2,
+      "raw_bytes": 86,
+      "sha256": "2648c0dd07d20f00bb611e8c1c4d81eda05f8f2e5f91cfc880578062074fe18f"
+    },
+    "FactPayment": {
+      "rows": 34807,
+      "columns": 7,
+      "raw_bytes": 1353593,
+      "sha256": "cec1cef92da0ab9e9bf42abcd802ccc60edbfe62f6eb105d534b2f323ca80597"
+    },
+    "DimScenario": {
+      "rows": 3,
+      "columns": 5,
+      "raw_bytes": 134,
+      "sha256": "db5529569516ad542327045f94245134d760da3327a674f193fee783acc779f5"
+    },
+    "DimCountry": {
+      "rows": 28,
+      "columns": 3,
+      "raw_bytes": 607,
+      "sha256": "d75e24396338f2b52f45efcc76aa4de994009995a4313daa478e7252067ca8e8"
+    }
+  }
+}

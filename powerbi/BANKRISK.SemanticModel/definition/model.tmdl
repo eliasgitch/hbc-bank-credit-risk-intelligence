@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DimDate","DimProduct","DimRegion","DimGrade","DimCustomer","DimLoan","DimScenario","FactLoanSnapshot","FactPayment","FactTransition","FactRecovery","DimCountry","FactCountryMonth","pDataRoot"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DimDate
+ref table DimProduct
+ref table DimRegion
+ref table DimGrade
+ref table DimCustomer
+ref table DimLoan
+ref table DimScenario
+ref table FactLoanSnapshot
+ref table FactPayment
+ref table FactTransition
+ref table FactRecovery
+ref table DimCountry
+ref table FactCountryMonth
+

@@ -1,0 +1,41 @@
+{
+  "name": "BANKRISKBase2026",
+  "dataColors": [
+    "#12B8A6",
+    "#3469A7",
+    "#E39B52",
+    "#8C71C7",
+    "#D85F73",
+    "#338B85",
+    "#A98C49",
+    "#697B92"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#213547",
+  "tableAccent": "#12B8A6",
+  "good": "#12B8A6",
+  "neutral": "#E39B52",
+  "bad": "#D85F73",
+  "textClasses": {
+    "title": {
+      "fontFace": "Arial",
+      "fontSize": 14,
+      "color": "#172A3A"
+    },
+    "header": {
+      "fontFace": "Arial",
+      "fontSize": 11,
+      "color": "#172A3A"
+    },
+    "label": {
+      "fontFace": "Arial",
+      "fontSize": 10,
+      "color": "#425466"
+    },
+    "callout": {
+      "fontFace": "Arial",
+      "fontSize": 23,
+      "color": "#142333"
+    }
+  }
+}

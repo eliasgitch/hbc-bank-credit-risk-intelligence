@@ -1,0 +1,32 @@
+table DimGrade
+	lineageTag: 9a5188b1-a454-4260-9d3c-a58b4694092b
+
+	column GradeKey
+		dataType: int64
+		isHidden
+		lineageTag: d6fb970c-7580-4c96-82be-6fb4d9b0e189
+		summarizeBy: none
+		sourceColumn: GradeKey
+
+	column Grade
+		dataType: string
+		lineageTag: 76896b83-cf6d-414e-8ec8-b90b0e3a438b
+		sourceColumn: Grade
+
+	column BasePD
+		dataType: double
+		lineageTag: 49e1045c-f32d-444b-ad16-08202ae54563
+		summarizeBy: none
+		sourceColumn: BasePD
+
+	partition DimGrade = m
+		mode: import
+		source =
+				let
+					Raw = Csv.Document(Binary.Decompress(Binary.FromText(
+					"cy9KTEn1Tq3UcQcxdJwSi1MDXHi5DHUcdQz0DAxMeLmMdJxATEMjXi5jHWcQ09iYl8tExwXENLfk5TLVcQUyDc14uQA=", BinaryEncoding.Base64), Compression.Deflate), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"GradeKey",Int64.Type},{"Grade",type text},{"BasePD",type number}}, "en-US")
+				in
+					Typed
+

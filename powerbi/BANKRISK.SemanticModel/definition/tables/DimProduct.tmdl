@@ -1,0 +1,26 @@
+table DimProduct
+	lineageTag: 1e92ecd9-6d20-471f-af79-366ebaf74f84
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		lineageTag: 43a8c8e5-f3fc-4dc1-8a01-96d586d1d585
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+	column ProductName
+		dataType: string
+		lineageTag: 9947d72c-71a9-4305-b638-9fe1b494cf57
+		sourceColumn: ProductName
+
+	partition DimProduct = m
+		mode: import
+		source =
+				let
+					Raw = Csv.Document(Binary.Decompress(Binary.FromText(
+					"CyjKTylNLvFOrdQJgDD9EnNTebkMdXzzi0rSE9NTi3m5jHQCUouK8/MScxRy8hPzgCLGOo6lJfkKaZl5iXnJQOUmOsG+rgo5qXkpmXnpvFwA", BinaryEncoding.Base64), Compression.Deflate), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Headers, {{"ProductKey",Int64.Type},{"ProductName",type text}}, "en-US")
+				in
+					Typed
+
